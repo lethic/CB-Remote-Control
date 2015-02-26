@@ -14,7 +14,8 @@ int main(int argc, char* argv[]){
 	if (argc != 2){
 		printf("Please povide a chatter id.\n \
 			\t cbctrl CHATTERBOX_ID\n \
-			for example: cbctrl cb13\n")
+			for example: cbctrl cb13\n");
+		return 1;
 	}
 	printf("Chatterbox remote controller usage:\n \
 		\t press the key continuously\n	      \
@@ -22,7 +23,8 @@ int main(int argc, char* argv[]){
 		\t s for backward\n                   \
 		\t a for left\n                       \
 		\t d for right\n                      \
-		\t q for quit \n                      \
+		\t z for spin\n                       \
+		\t q for quit (IMPORTANT!)\n                      \
 		\n if none of the keys is pressed, the chatterbox stops.\n");
 	CBRedisClient* redis = new CBRedisClient(argv[1], "hal", 6379);
 	char input = 0;
