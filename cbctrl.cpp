@@ -23,8 +23,9 @@ int main(int argc, char* argv[]){
 		\t s for backward\n                   \
 		\t a for left\n                       \
 		\t d for right\n                      \
-		\t z for spin\n                       \
-		\t q for quit (IMPORTANT!)\n                      \
+		\t z for spin clockwise\n             \
+		\t c for spin counter-clockwise\n     \
+		\t q for quit (IMPORTANT!)\n          \
 		\n if none of the keys is pressed, the chatterbox stops.\n");
 	CBRedisClient* redis = new CBRedisClient(argv[1], "hal", 6379);
 	char input = 0;
